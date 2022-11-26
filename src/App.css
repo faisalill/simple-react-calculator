@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  background: white;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 6rem);
+  
+  height: 718px;
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+  border-radius: 10px;
+  color: red;
+  font-family: 'Anton', sans-serif;
+  background-color: rgba(0, 0, 0, .1);
+  background: linear-gradient(90deg,#ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(255, 255, 255, );
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  font-family: 'Anton', sans-serif;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: red;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg,#ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+}
+
+.typewriter{
+  width: 500px;
+  position: relative;
+  top: 80px;
+  right: 65px;
+  text-align: center;
+  font-size: 50px;
+  /* color: red; */
+  font-family: 'Anton', sans-serif;
+  background: linear-gradient(90deg,#ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s linear infinite;
+
+  
+}
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+
+.icons{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 70px;
+  position: relative;
+  top: 30px
+  
+}
+.githubIcon{
+  font-size: 60px;
+  color: rgba(255,255,255,0.75);
 }
 
-.App-link {
-  color: #61dafb;
+.twitterIcon{
+  color: rgba(255,255,255,0.75);
+  font-size: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.githubIcon  :hover{
+  color:white
+}
+.twitter  Icon  :hover{
+  color:white
 }
