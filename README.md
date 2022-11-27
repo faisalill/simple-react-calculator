@@ -1,4 +1,4 @@
-#www.faisalill.github.io/simple-react-calculator
+https://faisalill.github.io/simple-react-calculator/
 
 # Getting Started with Create React App
 
