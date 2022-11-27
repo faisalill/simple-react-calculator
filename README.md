@@ -1,4 +1,5 @@
-https://faisalill.github.io/simple-react-calculator/
+https://faisalill.github.io/simple-react-calculator/ //github pages site
+https://simplecalculator-two.vercel.app/ //vercel site
 
 # Getting Started with Create React App
 
